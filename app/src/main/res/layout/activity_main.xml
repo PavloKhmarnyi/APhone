@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Audio phone"
+        android:textSize="25dp"
+        android:background="@color/colorDarkGreen"
+        android:textColor="@color/colorWhite">
+    </TextView>
+
+    <TextView
+        android:id="@+id/roomNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Please enter a room name:"
+        android:textSize="20dp"
+        android:layout_below="@+id/titleTextView">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/joinLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/roomNameTextView">
+
+        <EditText
+            android:id="@+id/roomNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="0.75">
+        </EditText>
+
+        <ImageView
+            android:id="@+id/connectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/sym_action_call">
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/callLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/joinLinearLayout">
+
+        <TextView
+            android:id="@+id/callStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/colorDarkGreen">
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/callStatusProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkGreen">
+        </ProgressBar>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:layout_below="@+id/callLinearLayout">
+
+        <ImageView
+            android:id="@+id/disconnectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/disconnect">
+        </ImageView>
+
+    </LinearLayout>
+
+</RelativeLayout>
